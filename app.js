@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let grid = document.querySelector('#grid');
+  let grid = document.querySelector('.grid');
+  // grid.classList.add('hidden');
   const remainingFlags = document.querySelector('#rem-flags');
   const result = document.querySelector('#result');
   const reset = document.querySelector('#reset');
@@ -12,39 +13,48 @@ document.addEventListener('DOMContentLoaded', () => {
   let squares = [];
   let isGameOver = false;
   
-  reset.addEventListener('click', resetBoard);
-  
+  // reset.addEventListener('click', resetBoard);
+
   newGame10.addEventListener('click', () => {
+    grid.classList.add('game-10')
+    // resetBoard();
     createBoard(10);
   });
   newGame20.addEventListener('click', () => {
+    grid.classList.add('game-20')
     createBoard(20);
   });
   newGame30.addEventListener('click', () => {
+    grid.classList.add('game-30')
     createBoard(30);
   });
 
-  function resetBoard(e) {
-    e.preventDefault();
-    console.log('old: ', grid);
-    // debugger
-    // while (grid.firstElementChild) {
-      // grid.removeEventListener('click', function(e) {
-      //   leftClick(square);
-      // })
-    //   grid.removeChild(grid.lastElementChild);
-    // }
-    grid.textContent = ''
-    // createBoard();
-    result.innerHTML = '';
-    console.log(isGameOver)
-    isGameOver = false;
-  }
+  // function resetBoard(e) {
+  //   // debugger
+  //   // while (grid.firstElementChild) {
+  //     // grid.removeEventListener('click', function(e) {
+  //       //   leftClick(square);
+  //       // })
+  //       //   grid.removeChild(grid.lastElementChild);
+  //       // }
+  //   e.preventDefault();
+  //   grid.classList.add('hidden');
+  //   grid.classList.remove('show');
+  //   grid.classList.remove('game-10');
+  //   grid.classList.remove('game-20');
+  //   grid.classList.remove('game-30');
+  //   grid.textContent = '';
+  //   result.innerHTML = '';
+  //   console.log(isGameOver)
+  //   isGameOver = false;
+  // }
 
   // Create Board
   function createBoard(n) {
-    let width = n;
-    let bombs = (n*n)/5;
+    grid.classList.remove('hidden');
+    grid.classList.add('game-10');
+    width = n;
+    bombs = (width*width)/5;
     remainingFlags.innerHTML = bombs;
 
     const bombsArr = Array(bombs).fill('bomb');
@@ -60,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       squares.push(square);
 
       // Left click listener
-      square.addEventListener('click', function(e) {
+      square.addEventListener('click', () => {
         leftClick(square);
       })
 
@@ -89,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // createBoard();
 
   function addFlag(square) {
     if (isGameOver) return;
