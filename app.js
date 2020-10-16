@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //   return false;
   // }
 
-  
   // Create Board
   function createBoard(n) {
     grid.classList.remove('hidden');
