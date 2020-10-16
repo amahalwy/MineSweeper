@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/amahalwy/MineSweeper.git"
   },
-  "author": "",
+  "author": "Ahmed El Mahallawy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amahalwy/MineSweeper/issues"

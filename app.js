@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Check squares beside the clicked square
   function check(square, id) {
-    if (width === 10) {
+    if (width === 20) {
       const isLeft = (id % width === 0);
       const isRight = (id % width === width - 1);
   
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
   
       }, 10)
-    } else if (width === 20) {
+    } else if (width === 10) {
       const isLeft = (id % width === 0);
       const isRight = (id % width === width - 1);
 
