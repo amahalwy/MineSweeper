@@ -1,0 +1,19 @@
+{
+  "name": "msweep",
+  "version": "1.0.0",
+  "description": "Classic Minesweeper game built using HTML, CSS and vanilla JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amahalwy/MineSweeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amahalwy/MineSweeper/issues"
+  },
+  "homepage": "https://github.com/amahalwy/MineSweeper#readme"
+}
