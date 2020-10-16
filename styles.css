@@ -77,12 +77,26 @@ div {
 }
 
 .game-30 {
-  width: 600px;
-  height: 600px;
+  width: 1200px;
+  height: 1200px;
 }
 
 .game-10,
 .game-20,
 .game-30 {
   display: flex;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: gray;
+  text-decoration: line-through;
+  cursor: default !important;
 }
