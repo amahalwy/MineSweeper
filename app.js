@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.document.addEventListener('DOMContentLoaded', () => {
   let grid = document.querySelector('.grid');
   const remainingFlags = document.querySelector('#rem-flags');
   const result = document.querySelector('#result');
